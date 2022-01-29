@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.airbnbggouy.fragment.Main"
+        android:label="fragment_detail_message"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/fromMainToLIstVille"
+            app:destination="@id/listVille" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/listVille"
+        android:name="com.example.airbnbggouy.fragment.ListVille"
+        android:label="fragment_list_ville"
+        tools:layout="@layout/fragment_list_ville" >
+        <argument
+            android:name="recherche"
+            app:argType="com.example.airbnbggouy.bo.Recherche" />
+        </fragment>
+
+
+
+</navigation>
