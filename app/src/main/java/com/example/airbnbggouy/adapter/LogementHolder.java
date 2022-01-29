@@ -1,23 +1,19 @@
 package com.example.airbnbggouy.adapter;
 
-
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.airbnbggouy.databinding.RowCityBinding;
+import com.example.airbnbggouy.databinding.RowLogementsBinding;
 
-public class VilleHolder extends RecyclerView.ViewHolder {
+public class LogementHolder extends RecyclerView.ViewHolder {
 
-    RowCityBinding binding;
+    RowLogementsBinding binding;
 
 
-    public VilleHolder(@NonNull RowCityBinding binding) {
+    public LogementHolder(@NonNull RowLogementsBinding binding) {
         super(binding.getRoot());
         this.binding = binding;
-
-
     }
 }
-

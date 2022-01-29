@@ -16,8 +16,6 @@
             app:destination="@id/listVille" />
     </fragment>
 
-
-
     <fragment
         android:id="@+id/listVille"
         android:name="com.example.airbnbggouy.fragment.ListVille"
@@ -26,7 +24,23 @@
         <argument
             android:name="recherche"
             app:argType="com.example.airbnbggouy.bo.Recherche" />
-        </fragment>
+        <action
+            android:id="@+id/fromVilleToLogements"
+            app:destination="@id/listLogements" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listLogements"
+        android:name="com.example.airbnbggouy.fragment.ListVille"
+        android:label="fragment_list_ville"
+        tools:layout="@layout/fragment_list_logements" >
+        <argument
+            android:name="ville"
+            app:argType="com.example.airbnbggouy.bo.Ville" />
+    </fragment>
+
+
+
 
 
 

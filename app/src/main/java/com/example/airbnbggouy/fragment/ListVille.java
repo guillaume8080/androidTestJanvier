@@ -1,6 +1,7 @@
 package com.example.airbnbggouy.fragment;
 
-import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.airbnbggouy.R;
 import com.example.airbnbggouy.adapter.VilleAdapter;
@@ -21,9 +24,11 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 
-import org.json.JSONArray;
-
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -135,14 +140,36 @@ public class ListVille extends Fragment {
 
     private void initialiser() {
 
+
+
         villeAdapter = new VilleAdapter();
         recyclerViewVilles = getView().findViewById(R.id.RecyclerViewVilles);
 
+
+
         villeAdapter.setVilleArrayList(VilleArrayList);
         recyclerViewVilles.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        // Picasso.with(context).load(uri).into(holder.binding.imageViewCity);
+
         recyclerViewVilles.setAdapter(villeAdapter);
+
+        // on new thread
+
 
     }
 
+    public  void maMethode(){
+
+
+
+    }
+
+
+
+
+
+
 }
+
+
 
